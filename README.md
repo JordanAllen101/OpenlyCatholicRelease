@@ -1,156 +1,80 @@
 # Openly Catholic
 
-Openly Catholic is an Android app for daily prayer and Catholic spiritual practices.
+An Android companion for daily Catholic prayer and spiritual life.
 
-## ✨ Features
+Openly Catholic brings prayer, daily readings, and practical tools for preparing for Confession together in one focused app.
 
-### 📿 Rosary
-- Complete Rosary prayers with all mysteries
-- Daily mystery selection based on the day of the week
-- Easy-to-follow guided prayers
-- Beautiful, distraction-free interface
-- **Audio Rosary**: Add custom MP3 audio files to pray along with
+## Features
 
-### 📖 Daily Missal
-- Access to daily Mass readings
-- Responsorial psalms with proper formatting
-- Alleluia verses
-- Gospel readings
-- Liturgical calendar integration
+- **Rosary:** Guided prayers, daily mystery selection, mystery artwork, and optional playback using your own audio files.
+- **Daily Missal:** Readings for the day, including the responsorial psalm and Gospel.
+- **Examination of conscience:** Full and quick examinations, custom entries, and confession history.
+- **Confession guide:** A step-by-step guide for the Sacrament of Reconciliation.
+- **Reminders:** Optional confession and penance reminders.
+- **App updates:** Check for published releases from the app's Settings screen.
 
-### ✝️ Examination of Conscience
-- **Full Examination**: Comprehensive self-reflection across all Ten Commandments
-- **Quick Examination**: Fast checklist for serious sins
-- **Custom Sins**: Add your own custom sins if predefined ones aren't sufficient
-- **Confession Guide**: Step-by-step guide through the sacrament of confession
-- **Confession History**: Track your past confessions
+## Requirements
 
-### ⏰ Confession Reminders
-- Optional weekly reminder notifications
-- Customizable settings
-- Gentle prompts to prepare for confession
-- Fully integrated with examination of conscience
-- **Penance Reminders**: Separate reminders for completing penance
-
-## 🎵 Audio Rosary Guide
-
-The Audio Rosary feature allows you to pray along with custom MP3 audio files. Here's how to set it up:
-
-### Setting Up Audio Rosary
-
-1. **Prepare Your Audio Files**
-   - Gather or record MP3 files for each rosary prayer
-   - Name them according to the naming convention below
-   - Place all files in a single folder on your device
-
-2. **Enable Audio Rosary**
-   - Open the Rosary screen
-   - Tap the 🎵 (music note) button in the top-right
-   - Tap "Select Folder" to choose your audio files folder
-   - Enable the "Enable Audio Rosary" toggle
-   - Tap "Save Settings"
-
-3. **Using Audio Playback**
-   - When audio is enabled, a play/pause button appears below the prayer text
-   - Tap "▶ Play" to start audio for the current step
-   - Tap "⏸ Pause" to stop playback
-   - Audio automatically advances as you move through rosary steps
-
-### Audio File Naming Convention
-
-Your MP3 files must be named exactly as follows:
-
-| Step | File Name | Description |
-|------|-----------|-------------|
-| 1 | `sign_of_cross.mp3` | Sign of the Cross |
-| 2 | `apostles_creed.mp3` | Apostles' Creed |
-| 3 | `our_father.mp3` | Our Father (used multiple times) |
-| 4 | `hail_mary.mp3` | Hail Mary (used multiple times) |
-| 5 | `glory_be.mp3` | Glory Be (used multiple times) |
-| 6 | `mystery_1.mp3` | First Mystery |
-| 10 | `mystery_2.mp3` | Second Mystery |
-| 15 | `mystery_3.mp3` | Third Mystery |
-| 20 | `mystery_4.mp3` | Fourth Mystery |
-| 25 | `mystery_5.mp3` | Fifth Mystery |
-| 9, 14, 19, 24, 29 | `fatima.mp3` | Fatima Prayer (after each decade) |
-| 30 | `hail_holy_queen.mp3` | Hail Holy Queen |
-
-**Note**: Some files are reused multiple times (Our Father, Hail Mary, Glory Be, Fatima). You only need one copy of each.
-
-### Tips
-
-- Use high-quality MP3 files (128kbps or higher recommended)
-- Keep audio files relatively short (30 seconds to 2 minutes per prayer)
-- Ensure consistent volume levels across all files
-- Test playback before using in prayer
-- The app uses Android's Storage Access Framework to access your files securely
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Android Studio Hedgehog (2023.1.1) or later
+- Android Studio with Android SDK Platform 33
 - JDK 17
-- Android SDK 33
-- Minimum SDK: 21 (Android 5.0 Lollipop)
+- Android 5.0 (API 21) or later
 
-### Building the App
+## Build
 
-Open the project directory in Android Studio, or build from a terminal.
+Open this project folder in Android Studio, or build from a terminal:
 
-Windows:
-   ```bash
-   .\gradlew.bat :app:assembleDebug
-   ```
+**Windows**
 
-macOS/Linux:
-   ```bash
-   ./gradlew :app:assembleDebug
-   ```
-
-The debug APK is written to `app/build/outputs/apk/debug/`.
-
-## 🏗️ Architecture
-
-- **Language**: Java
-- **UI Framework**: Android XML layouts with Fragments
-- **Navigation**: Fragment transactions with back stack management
-- **Data Storage**: SharedPreferences and JSON assets
-- **Background Tasks**: WorkManager for scheduled reminders
-- **Build System**: Gradle
-
-### Project Structure
-
-```
-app/
-├── src/main/
-│   ├── java/com/openlycatholic/app/
-│   │   ├── examination/       # Examination of conscience features
-│   │   ├── home/              # Home screen navigation
-│   │   ├── missal/            # Daily readings and missal
-│   │   ├── rosary/            # Rosary prayers and mysteries
-│   │   └── MainActivity.java  # Main activity
-│   ├── res/
-│   │   ├── layout/            # XML layouts
-│   │   ├── values/            # Colors, strings, etc.
-│   │   └── mipmap/            # App icons
-│   └── AndroidManifest.xml
-└── build.gradle
+```powershell
+.\gradlew.bat :app:assembleDebug
 ```
 
-## 🎨 Customization
+**macOS / Linux**
 
-### Colors
-The app uses a dark theme with gold accents. Colors can be customized in `res/values/colors.xml`:
-- Primary: `#D4AF37` (Gold)
-- Background: `#1a1a2e` (Dark blue)
-- Text: White and secondary gray
+```sh
+./gradlew :app:assembleDebug
+```
 
-### Features
-Each feature is modular and can be extended:
-- Add new examination categories in `ExaminationData.java`
-- Customize rosary mysteries in the rosary package
-- Modify reminder frequency in `ConfessionReminderFragment.java`
+The debug APK is generated at `app/build/outputs/apk/debug/`.
 
-## 📝 License
+To build a signed release APK, configure the release keystore and passwords locally. Do not commit the keystore or signing credentials. Release signing expects:
 
-This checkout does not include a `LICENSE` file. Confirm the project's license with its maintainer before redistributing the source.
+- `~/android-signing/OpenlyCatholic-release.jks`
+- Gradle user properties `OPENLY_CATHOLIC_STORE_PASSWORD` and `OPENLY_CATHOLIC_KEY_PASSWORD`
+
+Then run `:app:assembleRelease` from Android Studio or the Gradle wrapper. Release builds require the original signing key to update an existing installation.
+
+## Project layout
+
+```text
+app/src/main/
+├── assets/       Bundled reading data
+├── java/         Android application code
+├── res/          Layouts, images, icons, and themes
+└── AndroidManifest.xml
+```
+
+The app is written in Java and uses Android XML layouts and fragments. Settings and local records are stored on-device; WorkManager schedules reminders.
+
+## Audio Rosary
+
+Audio Rosary uses files you select from your device. Place the supported MP3 files in one folder and select it from the Rosary audio settings:
+
+| Prayer or step | File name |
+| --- | --- |
+| Sign of the Cross | `sign_of_cross.mp3` |
+| Apostles' Creed | `apostles_creed.mp3` |
+| Our Father | `our_father.mp3` |
+| Hail Mary | `hail_mary.mp3` |
+| Glory Be | `glory_be.mp3` |
+| Fatima Prayer | `fatima.mp3` |
+| Hail Holy Queen | `hail_holy_queen.mp3` |
+| Mystery announcements | `mystery_1.mp3` through `mystery_5.mp3` |
+
+Common prayers are reused across the decades; one copy of each file is sufficient.
+
+## License and third-party materials
+
+Project code authored for Openly Catholic is licensed under the GNU General Public License, version 3 or (at your option) any later version. See [LICENSE](LICENSE).
+
+Bundled Bible readings, translation datasets, artwork, and other third-party materials are not relicensed by the project license. Their respective copyright notices, permissions, and terms continue to apply; check the source and licensing information for each item before redistributing it.
