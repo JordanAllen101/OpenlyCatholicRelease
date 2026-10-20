@@ -1,0 +1,33 @@
+# Gradle and Android build output
+.gradle/
+**/build/
+local.properties
+.externalNativeBuild/
+.cxx/
+captures/
+
+# Android packages and generated artifacts
+*.apk
+*.aab
+*.ap_
+*.hprof
+
+# Signing keys and local signing configuration
+*.jks
+*.keystore
+*.p12
+*.pfx
+keystore.properties
+signing.properties
+
+# IDE and machine-specific files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example

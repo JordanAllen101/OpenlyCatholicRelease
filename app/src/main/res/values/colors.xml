@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Open Catholic Theme Colors - Professional Dark Mode -->
+    
+    <!-- Primary Colors -->
+    <color name="primary">#D4AF37</color>
+    <color name="primary_dark">#B8962E</color>
+    <color name="primary_light">#FFD95A</color>
+    
+    <!-- Secondary Colors -->
+    <color name="secondary">#8B6B1F</color>
+    <color name="secondary_dark">#6B5215</color>
+    <color name="secondary_light">#E6C76A</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#0A1325</color>
+    <color name="background_elevated">#0F1E36</color>
+    <color name="background_card">#13294B</color>
+    
+    <!-- Surface Colors -->
+    <color name="surface">#0F1E36</color>
+    <color name="surface_variant">#1A2E4D</color>
+    <color name="surface_highlight">#244066</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B8C5D6</color>
+    <color name="text_tertiary">#7A8A9E</color>
+    <color name="text_disabled">#4A5A6E</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent">#D4AF37</color>
+    <color name="accent_container">#1A2E4D</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+    
+    <!-- Divider Colors -->
+    <color name="divider">#1A2E4D</color>
+    <color name="divider_light">#244066</color>
+    
+    <!-- Legacy Colors (for compatibility) -->
+    <color name="ic_launcher_background">#0A1325</color>
+    <color name="background_navy">#0A1325</color>
+    <color name="surface_navy">#13294B</color>
+    <color name="primary_gold">#D4AF37</color>
+    <color name="light_gold">#E6C76A</color>
+    <color name="gold_accent">#FFD95A</color>
+    <color name="divider_gold">#8B6B1F</color>
+    <color name="text_white">#FFFFFF</color>
+
+
+
+
+</resources>

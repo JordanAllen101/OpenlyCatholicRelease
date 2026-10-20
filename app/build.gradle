@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+}
+
+
+android {
+
+    namespace 'com.openlycatholic.app'
+
+    compileSdk 33
+
+    signingConfigs {
+        release {
+            storeFile new File(
+                    System.getProperty("user.home"),
+                    "android-signing/OpenlyCatholic-release.jks"
+            )
+            storePassword providers.gradleProperty("OPENLY_CATHOLIC_STORE_PASSWORD").orNull
+            keyAlias "openlycatholic"
+            keyPassword providers.gradleProperty("OPENLY_CATHOLIC_KEY_PASSWORD").orNull
+        }
+    }
+
+    defaultConfig {
+
+        applicationId "com.openlycatholic.app"
+
+        minSdk 21
+
+        targetSdk 33
+
+        versionCode 5
+
+        versionName "1.0.4"
+
+        archivesBaseName = "OpenlyCatholic"
+
+    }
+
+
+    buildTypes {
+
+        release {
+
+            minifyEnabled false
+            signingConfig signingConfigs.release
+
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'
+            ),
+            'proguard-rules.pro'
+
+        }
+
+    }
+
+}
+
+
+dependencies {
+
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+
+    implementation 'androidx.fragment:fragment:1.6.2'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'androidx.documentfile:documentfile:1.0.1'
+
+    // Used for saving/loading confession history
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // WorkManager for background tasks
+    implementation 'androidx.work:work-runtime:2.8.1'
+
+
+    // Force one Kotlin version
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+
+
+}
+
+
+configurations.all {
+
+    resolutionStrategy {
+
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20'
+
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20'
+
+    }
+
+}

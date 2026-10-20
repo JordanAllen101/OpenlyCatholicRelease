@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Daily Missal"
+            android:textColor="@color/primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/dailyReadingsTitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/firstReadingTitle"
+            android:textColor="@color/primary"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/firstReadingContent"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:background="@drawable/reading_surface"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:longClickable="true" />
+
+        <TextView
+            android:id="@+id/psalmTitle"
+            android:textColor="@color/primary"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/psalmContent"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:background="@drawable/reading_surface"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:longClickable="true" />
+
+        <TextView
+            android:id="@+id/secondReadingTitle"
+            android:textColor="@color/primary"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/secondReadingContent"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:background="@drawable/reading_surface"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/alleluiaTitle"
+            android:textColor="@color/primary"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/alleluiaContent"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:background="@drawable/reading_surface"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/gospelTitle"
+            android:textColor="@color/primary"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/gospelContent"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:lineSpacingExtra="4dp"
+            android:background="@drawable/reading_surface"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:longClickable="true" />
+
+        <WebView
+            android:id="@+id/usccbReadingsWebView"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:alpha="0"
+            android:importantForAccessibility="no"
+            android:focusable="false" />
+    </LinearLayout>
+</ScrollView>

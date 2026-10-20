@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/background_elevated"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/navHomeIconBackground"
+                android:background="@drawable/nav_icon_selected"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <ImageView
+                    android:id="@+id/navHomeIcon"
+                    android:src="@drawable/ic_nav_home"
+                    android:contentDescription="@null"
+                    android:layout_gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/navHomeLabel"
+                android:text="Home"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navRosary"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Rosary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/navRosaryIconBackground"
+                android:background="@drawable/nav_icon_selected"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <ImageView
+                    android:id="@+id/navRosaryIcon"
+                    android:src="@drawable/ic_nav_rosary"
+                    android:contentDescription="@null"
+                    android:layout_gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/navRosaryLabel"
+                android:text="Rosary"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navMissal"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Daily Missal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/navMissalIconBackground"
+                android:background="@drawable/nav_icon_selected"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <ImageView
+                    android:id="@+id/navMissalIcon"
+                    android:src="@drawable/ic_nav_missal"
+                    android:contentDescription="@null"
+                    android:layout_gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/navMissalLabel"
+                android:text="Missal"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navExamination"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Examination"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/navExaminationIconBackground"
+                android:background="@drawable/nav_icon_selected"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <ImageView
+                    android:id="@+id/navExaminationIcon"
+                    android:src="@drawable/ic_nav_examination"
+                    android:contentDescription="@null"
+                    android:layout_gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/navExaminationLabel"
+                android:text="Examine"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
