@@ -9,6 +9,7 @@ Openly Catholic brings prayer, daily readings, and practical tools for preparing
 - **Rosary:** Guided prayers, daily mystery selection, mystery artwork, and optional playback using your own audio files.
 - **Daily Missal:** Readings for the day, including the responsorial psalm and Gospel.
 - **Examination of conscience:** Full and quick examinations, custom entries, and confession history.
+- **Nearby churches:** Browse Mass, Confession, and Adoration schedules within 100 miles using optional approximate location. Location is sent to MassTimes only when you request a search.
 - **Confession guide:** A step-by-step guide for the Sacrament of Reconciliation.
 - **Reminders:** Optional confession and penance reminders.
 - **App updates:** Check for published releases from the app's Settings screen.

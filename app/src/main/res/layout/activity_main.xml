@@ -179,5 +179,43 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navChurches"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Nearby Parishes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/navChurchesIconBackground"
+                android:background="@drawable/nav_icon_selected"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <ImageView
+                    android:id="@+id/navChurchesIcon"
+                    android:src="@drawable/ic_nav_church"
+                    android:contentDescription="@null"
+                    android:layout_gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/navChurchesLabel"
+                android:text="Parishes"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

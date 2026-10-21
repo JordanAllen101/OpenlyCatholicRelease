@@ -214,6 +214,19 @@
 
         </androidx.cardview.widget.CardView>
 
+        <TextView
+            android:id="@+id/eulaLink"
+            android:text="End User License Agreement"
+            android:textSize="14sp"
+            android:textColor="@color/primary_light"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
 </ScrollView>

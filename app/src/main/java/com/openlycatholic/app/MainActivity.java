@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.openlycatholic.app.churches.NearbyChurchesFragment;
 import com.openlycatholic.app.examination.ExaminationFragment;
 import com.openlycatholic.app.home.HomeFragment;
 import com.openlycatholic.app.missal.MissalFragment;
@@ -24,25 +25,29 @@ public class MainActivity extends AppCompatActivity {
             R.id.navHome,
             R.id.navRosary,
             R.id.navMissal,
-            R.id.navExamination
+            R.id.navExamination,
+            R.id.navChurches
     };
     private final int[] tabIconBackgrounds = {
             R.id.navHomeIconBackground,
             R.id.navRosaryIconBackground,
             R.id.navMissalIconBackground,
-            R.id.navExaminationIconBackground
+            R.id.navExaminationIconBackground,
+            R.id.navChurchesIconBackground
     };
     private final int[] tabIcons = {
             R.id.navHomeIcon,
             R.id.navRosaryIcon,
             R.id.navMissalIcon,
-            R.id.navExaminationIcon
+            R.id.navExaminationIcon,
+            R.id.navChurchesIcon
     };
     private final int[] tabLabels = {
             R.id.navHomeLabel,
             R.id.navRosaryLabel,
             R.id.navMissalLabel,
-            R.id.navExaminationLabel
+            R.id.navExaminationLabel,
+            R.id.navChurchesLabel
     };
     private int selectedTab = HOME_TAB;
 
@@ -59,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 selectTab(2, new MissalFragment()));
         findViewById(R.id.navExamination).setOnClickListener(v ->
                 selectTab(3, new ExaminationFragment()));
+        findViewById(R.id.navChurches).setOnClickListener(v ->
+                selectTab(4, new NearbyChurchesFragment()));
 
         if (savedInstanceState != null) {
             selectedTab = savedInstanceState.getInt("selectedTab", HOME_TAB);
